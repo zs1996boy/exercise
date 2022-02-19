@@ -1,0 +1,588 @@
+/* 统一样式1 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline
+}
+
+/* 统一样式2 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+/* 清除原样式 */
+body {
+	line-height: 1
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+input,
+textarea {
+	-webkit-user-select: auto;
+	margin: 0px;
+	padding: 0px;
+	outline: none
+}
+
+button {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	margin: 0
+}
+
+.cleartbtn {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	margin: 0
+}
+
+/* 修改input输入框字体颜色 */
+
+/* WebKit browsers */
+input::-webkit-input-placeholder {
+	color: #C0C0C0;
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+	color: #C0C0C0;
+	opacity: 1;
+}
+
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+	color: #C0C0C0;
+	opacity: 1;
+}
+
+/* Internet Explorer 10+ */
+input:-ms-input-placeholder {
+	color: #C0C0C0;
+}
+
+
+/*设置规则样式  */
+/* 禁止长按识别复制 */
+* {
+	-webkit-touch-callout: none;
+	/*系统默认菜单被禁用*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	-moz-user-select: none;
+	/*火狐*/
+	-ms-user-select: none;
+	/*IE10*/
+	user-select: none;
+}
+
+/* 禁止长按保存图片*/
+img {
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* 可以长按保存 */
+.longbtn {
+	pointer-events: auto;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	user-select: text;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* 多次使用 */
+/* 
+名法
+m 自己的统一方法
+ */
+
+/* 全屏显示 */
+.All {
+	width: 100vw;
+	/* 99.9可以防止部分手机的无法滚动 */
+	height: 99.9vh;
+	background: #fff;
+	z-index: 32;
+	position: fixed;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.a_ms {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+/* 清除边框内的滚动栏 */
+.All::-webkit-scrollbar {
+	display: none;
+}
+
+div::-webkit-scrollbar {
+	display: none;
+}
+
+/* 文本超出省略号结尾 */
+/* 一行显示 */
+.m-sl {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 二行显示 */
+.m-sl2 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden
+}
+
+/* 三行显示 */
+.m-sl3 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden
+}
+
+
+/* 定位 */
+/* 固定定位 */
+.m-prt {
+	position: relative;
+}
+
+/* 相对定位 */
+.m-pal {
+	position: absolute;
+}
+
+/* 绝对定位 */
+.m-pfd {
+	position: fixed;
+}
+
+
+
+/* // 居中定位 */
+.m-p-ct {
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+/* 左右居中 */
+.m-p-rfc {
+	transform: translate(-50%, 0);
+	top: 0;
+	left: 50%;
+}
+
+/* 上下居中 */
+.m-p-tbc {
+	transform: translate(0, -50%);
+	left: 0;
+	top: 50%;
+}
+
+
+/* flex的通用 */
+/* 平行布局 */
+.m-fx {
+	display: flex;
+}
+
+/*  左右分布布局 */
+.m-fx-rf {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*  上下居中布局 */
+.m-fx-tb {
+	display: flex;
+	align-items: center;
+}
+
+/* 内容居中布局 */
+.m-fx-ct {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* // 垂直平分布局 */
+.m-fx-vd {
+	display: flex;
+	flex-direction: column;
+}
+
+/* 剩余补充 */
+.m-fx-fl {
+	flex: 1;
+}
+
+/* 可换行  */
+.m-fx-wrap {
+	flex-wrap: wrap;
+}
+
+/* flex下的上下居中对齐 */
+.m-fx-tbct {
+	align-items: center;
+}
+
+/* flex下的左右居中对齐 */
+.m-fx-rgct {
+	justify-content: center;
+}
+
+/* flex下的左右平分佈局 */
+.m-fx-rgar {
+	justify-content: space-around;
+}
+
+
+
+/* 大部分样式 */
+/* // 100%宽高度 */
+.wh100 {
+	width: 100%;
+	height: 100%;
+}
+
+/* // 100%宽度 */
+.wid100 {
+	width: 100%;
+}
+
+/* 50%宽度 */
+.wid50 {
+	width: 50%;
+}
+
+/* 高度100% */
+.hei100 {
+	height: 100%;
+}
+
+/* 高度50% */
+.hei50 {
+	height: 50%;
+}
+
+/* // 字体颜色白色 */
+.color-white {
+	color: #fff !important;
+}
+
+/* 字体大小为0 , pc的清除img的边距 */
+.ftsize-0 {
+	font-size: 0;
+}
+
+/* 字体左齐 */
+.m-tx-lf {
+	text-align: left;
+}
+
+/* 字体右齐 */
+.m-tx-rg {
+	text-align: right;
+}
+
+/* 颜色隐藏 */
+.color-tsp {
+	background-color: transparent;
+	opacity: 0;
+}
+
+/* 澳门项目 */
+.mc_tx {
+	word-break: normal;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	text-align-last: left;
+	-ms-text-align-last: left;
+	-moz-text-align-last: left;
+}
+
+
+/* 加载框样式 */
+#my-loading {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2004;
+}
+
+#my-loading #my-loading_bx {
+	width: 140px;
+	height: 140px;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	padding: 20px;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+#my-loading-cercle {
+	height: 50px;
+	width: 50px;
+	border: 3px dashed;
+	border-radius: 50%;
+	animation: myfirst 2s infinite;
+	border-color: #fff transparent;
+	margin: 20px auto;
+}
+
+@keyframes myfirst {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* 自定义提示框样式 */
+#my-toast {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2004;
+}
+
+#my-toast #my-toast-bx {
+	min-width: 120px;
+	min-height: 30px;
+	max-width: 500px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#my-toast #my-toast-bx #my-toast-bx-tx {
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+/* 兼容移动样式 
+提示框
+加载框
+*/
+@media screen and (max-width: 1024px) {
+	#my-loading #my-loading_bx {
+		width: 140px;
+		height: 140px;
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 10px;
+		text-align: center;
+		color: #fff;
+		padding: 20px;
+	}
+
+	#my-loading-cercle {
+		height: 50px;
+		width: 50px;
+		border: 3px dashed;
+		border-radius: 50%;
+		animation: myfirst 2s infinite;
+		border-color: #fff transparent;
+		margin: 20px auto;
+	}
+
+	#my-toast {
+		display: none;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	#my-toast #my-toast-bx {
+		min-width: 120px;
+		min-height: 30px;
+		max-width: 500px;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: rgba(0, 0, 0, 0.7);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	#my-toast #my-toast-bx #my-toast-bx-tx {
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		line-height: 1.5em;
+		margin: 0;
+	}
+}
